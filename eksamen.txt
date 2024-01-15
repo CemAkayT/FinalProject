@@ -1,0 +1,8 @@
+# When you render the HTML template and pass data from the server (Python code) to the template, it is calles server side rendering.
+ The HTML content is generated on the server side
+
+# Server side is when you pass on data to the template from my python code(server) and client side rendering is almost an empty html. Javascript fetches data from the server. 
+
+Computer storage is a nice analogy: 
+Temporary items on a computer are stored in RAM (Random Access Memory), much like sessions,
+while permanent items are stored on the hard drive, much like databases.
