@@ -101,7 +101,7 @@ def checkout():
 def charge():
     userid = session.get("stored_user_id")
     cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM customers WHERE user_id = %s", [userid])
+    cur.execute("SELECT * FROM customers WHERE customer_id = %s", [userid])
     results = cur.fetchone()
 
     paid_amount = request.form.get("amountdue")
@@ -134,7 +134,7 @@ def charge():
         paymentID = charge["id"]
 
         for order in parsedJSON:
-            query = "INSERT INTO `flaskapp`.`orders` (`order_name`, `quantity`, `price`, `bought_at` ,`user_id`, `payment_id`) VALUES (%s, %s, %s, DATE_ADD(NOW(), INTERVAL 1 HOUR) ,%s, %s)"
+            query = "INSERT INTO `flaskapp`.`orders` (`order_name`, `quantity`, `price`, `bought_at` ,`customer_id`, `payment_id`) VALUES (%s, %s, %s, DATE_ADD(NOW(), INTERVAL 1 HOUR) ,%s, %s)"
             cur.execute(
                 query,
                 (order["title"], order["qnty"], order["price"], userid, paymentID),
