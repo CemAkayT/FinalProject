@@ -27,9 +27,9 @@ def update_product(product_id, title, description, price, section, image_path):
 
 
 if __name__ == "__main__":
-    product_id = 2
-    new_title = "Coca Cola 0.33 L"
-    new_description = "Iskold Cola"
+    product_id = 1
+    new_title = "Coca Cola 0.33 Lt."
+    new_description = "Iskold Cola i dåse"
     new_price = 14
     new_section = "Drikkevarer"
     new_image_path = "/static/images/cola.jpeg"

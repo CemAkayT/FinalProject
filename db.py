@@ -18,3 +18,5 @@ app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 # Create the MySQL object
 mysql = MySQL(app)
+
+print(os.getenv("MYSQL_USER"))
